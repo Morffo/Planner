@@ -1,0 +1,268 @@
+:root {
+    --primary-color: #4263eb;
+    --primary-light: #edf0ff;
+    --secondary-color: #3a0ca3;
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --text-light: #6c757d;
+    --border-color: #e9ecef;
+    --success-color: #2b8a3e;
+    --success-light: #ebfbee;
+  }
+  
+  .learning-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-color);
+  }
+  
+  .learning-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .learning-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+  
+  .learning-header p {
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+  
+  /* Сетка статистики */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: var(--bg-color);
+    border-radius: 4px;
+    margin: 1rem 0;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  
+  /* Секция целей */
+  .goals-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .input-group input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    min-width: 250px;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(66, 99, 235, 0.2);
+  }
+  
+  .input-group button {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .input-group button:hover {
+    background: var(--secondary-color);
+  }
+  
+  .input-group button:disabled {
+    background: var(--border-color);
+    cursor: not-allowed;
+  }
+  
+  .goals-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .goal-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .goal-item:last-child {
+    border-bottom: none;
+  }
+  
+  .goal-item label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    flex: 1;
+  }
+  
+  .goal-item input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+  }
+  
+  .goal-item.completed span {
+    text-decoration: line-through;
+    color: var(--text-light);
+  }
+  
+  .completed-badge {
+    background: var(--success-light);
+    color: var(--success-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  /* Секция достижений */
+  .achievements-section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .achievements-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .achievement-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: var(--primary-light);
+    transition: transform 0.2s;
+  }
+  
+  .achievement-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .achievement-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .achievement-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .achievement-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .learning-container {
+      padding: 1rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .input-group {
+      width: 100%;
+    }
+    
+    .input-group input {
+      min-width: auto;
+    }
+  }
